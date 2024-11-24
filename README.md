@@ -14,7 +14,12 @@
 3. Running:
    ```bash
    npm run dev
-   
+
+---
+
+## Submitted to: Nature Hacks 🌳
+
+---
 ## Inspiration 🌟
 **"Do what you can, with what you have, where you are."**  
 – Theodore Roosevelt  
