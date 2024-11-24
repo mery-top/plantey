@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+}
+
+:root {
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #ffffff;
+}
+
+/* NAVBAR - HEADER */
+.active{
+  background-color: #ffffff;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b0ffb0;
+  position: sticky;
+  top: 0;
+}
+
+nav ul{
+  display: flex;
+}
+
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: rgb(54, 189, 85);
+  padding: 0.5rem;
+  margin: 0 0.6rem;
+  border-radius: 0.5rem
+
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: bold;
+  color: rgb(54, 189, 85);
+  text-decoration: none;
+}
+
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+
+nav ul li a:not(.active):hover {
+  background-color:#d0f9d0 ;
+}
+
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 0.2rem;
+}
+
+
+@media (max-width: 480px) {
+  nav .menu {
+      display: flex;
+  }
+
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0.25rem;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+      margin: 0.2rem 0.5rem;
+  }
+
+  nav ul.open{
+    display: flex;
+  }
+
+}
+
+/* LOCATION BOX */
+
+.location{
+  text-align: center;
+}
+
+.location h1, .search h1{
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  color: rgb(45, 121, 63);
+}
+
+.location-box h1{
+  font-size: 0.8rem;
+  color: rgb(112, 112, 112);
+  
+}
+
+.location-box {
+  box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.2);
+  border-radius: 30px;
+  display: inline-block;
+  border:2px solid #82c782;
+}
+
+/* MAIN CONTENT */
+
+.types{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 20px;
+  padding: 1.1rem;
+  padding-bottom: 100px;
+
+}
+
+@media (max-width: 748px){
+  .types{
+    flex-direction: column;
+    align-items: center;
+  }
+  .plant-data-box .plant-box{
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .plant-data-box .plant-box .plant-info{
+    width: 250px;
+    height: 500px;
+    align-self: center;
+  }
+
+  .plant-image img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+
+@media(min-width: 1440px){
+  *{
+    align-items: center;
+  }
+  .types{
+    transform: scale(1.2);
+    gap:1.5rem;
+    padding-left: 1.5rem; /* Adds space to the left edge */
+    padding-right: 1.5rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .types .plant-type h2{
+    font-size: 17px;
+  }
+  .types .plant-type{
+    display: inline-block;
+    width: 300px;
+    height: 290px;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b0ffb0;
+    max-width: 100vw;
+  }
+
+  .title{
+    font-size: 40px;
+    margin: 1rem;
+    font-weight: bold;
+  }
+
+  .location h1, .search h1{
+    font-size: 27px;
+  }
+
+  .location .location-box{
+    margin: 30px;
+    padding: 10px;
+  }
+
+  .search .input-box input{
+    background-color: white;
+    border:3px solid #82c782;
+    padding: 20px;
+    color: #82c782;
+    border-radius: 20px;
+    font-size: 25px;
+  }
+  .search h1{
+    margin-top: 60px;
+  }
+
+  .plant-data-box .plant-box .plant-info{
+    width: 500px;
+    height: 500px;
+    align-self: center;
+    font-size: 20px;
+  }
+
+  .plant-data-box .plant-box .plant-image img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #334833;
+  }
+
+  nav ul li{
+    font-size: 20px;
+  }
+  nav ul li a{
+    margin: 0 1.5rem;
+  }
+
+  footer{
+    padding: 20px 0;
+  }
+
+  footer h1{
+    font-size: 30px;
+  }
+
+  .stats .glove img{
+    width: 500px;
+    height: 500px;
+    margin-top: -100px;
+  }
+
+  .stats h1{
+    font-size: 40px !important;
+    padding-bottom: 20px;
+  }
+
+  .stats p{
+    font-size: 25px;
+  }
+
+  
+
+}
+
+.types h1{
+  margin: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(45, 121, 63);
+}
+ul {
+  list-style-type: none;
+}
+.types h2{
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  text-align: start;
+  font-size: 0.8rem;
+}
+
+.plant-type{
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.2);
+  width: 220px;
+  height: 200px;
+  background-color: #d4f9d4;
+  overflow:auto;
+}
+
+.plant-type::-webkit-scrollbar{
+  width: 0.5em;
+  height: 1em; 
+}
+
+.plant-type::-webkit-scrollbar-track {
+  background: #d4f9d4; 
+  border-radius: 30px; 
+}
+
+.plant-type::-webkit-scrollbar-thumb,
+.soil-type::-webkit-scrollbar-thumb,
+.grow-tips::-webkit-scrollbar-thumb {
+  background-color: #334833; 
+  border-radius: 10px; 
+}
+
+.plant-type::-webkit-scrollbar-thumb:hover,
+.soil-type::-webkit-scrollbar-thumb:hover,
+.grow-tips::-webkit-scrollbar-thumb:hover {
+  background-color: #82c782; 
+}
+
+
+
+/* KNOW PLANTS */
+
+
+.search{
+  text-align: center;
+}
+.input-box{
+  box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.2);
+  border-radius: 20px;
+  display: inline-block;
+  border: none;
+}
+
+.input-box input{
+  background-color: white;
+  border:2px solid #82c782;
+  padding: 10px;
+  color: #82c782;
+  border-radius: 20px;
+}
+
+/* PLANT INFO */
+
+.plant-box{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+}
+
+.plant-info{
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.2);
+  width: 300px;
+  height: 300px;
+  background-color: #d4f9d4;
+  overflow:auto;
+  text-align: left;
+  padding: 5px;
+  padding-top: 25px;
+}
+
+.plant-info p, h2{
+  padding-left: 10px;
+  margin-bottom: 3px;
+}
+
+
+
+
+.plant-image img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #334833;
+}
+
+
+main .pot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -60px;
+}
+ main .pot img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+
+}
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b0ffb0;
+  bottom: 0;
+  width: 100%;
+  padding: 7px 0;
+}
+
+footer h1{
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 15px;
+  color: rgb(45, 121, 63);
+}
+
+.stats h1{
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 10px;
+  color: rgb(45, 121, 63);
+}
+
+footer .footer-image{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.glove{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats p{
+  padding-left: 10px;
+}
+
+.stats b{
+  color: #36ba36;
+}
+
+.stats img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-top: -50px;
+}
